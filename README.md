@@ -37,11 +37,11 @@ Nova Bot turns an Android phone into a full Discord bot host with a phone dashbo
 | **Support** | Tickets with private channels and transcripts, contact-us panels, private client areas with their own category, channel, forum, and handoff |
 | **Voice** | Music in voice channels (`/play`, `/queue`, `/skip`, `/nowplaying`, `/volume`), a 320-sound soundboard, text-to-speech into voice channels |
 | **Content** | YouTube and Suno playlists, news feeds (RSS), GitHub commit / PR / release feeds, Blues News, GIFs |
-| **Moderation** | Warn, warnings, timeout, kick, ban, purge — each checks the caller's Discord permissions first |
+| **Moderation** | Warn, warnings, timeout, kick, ban, purge, each checks the caller's Discord permissions first |
 | **Automation** | Member reminders (`/remind`), auto-posting streams, server stats updated every 10 minutes, guided setup, one-click demo server |
 | **Control** | Full dashboard in the app, home-screen Avatar and Stats widgets, terminal, diagnostics, copy-logs |
 
-**37 slash commands**, grouped by who can use them — everyone, voice, personal, moderators, admins, and server owner. Everyday commands also work as text (`!ping`, `!hello`, `!time`, `!profile`, `!yt`, `!gif`).
+**37 slash commands**, grouped by who can use them, everyone, voice, personal, moderators, admins, and server owner. Everyday commands also work as text (`!ping`, `!hello`, `!time`, `!profile`, `!yt`, `!gif`).
 
 ## How it works?  
 
@@ -63,7 +63,7 @@ The bot starts as a **blank canvas**. A fresh server gets no channels, no posts,
 
 **[Download Nova Bot v1.0 Phelsuma (APK, 61 MB)](https://github.com/jordanalbiar/nova-bot/releases/download/v1.0/nova-bot-v1.0-phelsuma.apk)**
 
-First public release — nicknamed Phelsuma, after the day gecko. Install it over any earlier build. See the [v1.0 release notes](https://github.com/jordanalbiar/nova-bot/releases/tag/v1.0) for what's in it.
+First public release, nicknamed Phelsuma, after the day gecko. Install it over any earlier build. See the [v1.0 release notes](https://github.com/jordanalbiar/nova-bot/releases/tag/v1.0) for what's in it.
 
 
 ## Quick start
@@ -71,7 +71,7 @@ First public release — nicknamed Phelsuma, after the day gecko. Install it ove
 1. Install the Nova Bot APK on an Android phone (Android 10+).
 2. Create your own bot application in the [Discord Developer Portal](https://discord.com/developers/applications), copy its token, and invite it to your server with Administrator.
 3. Open Nova Bot, paste the token in the app, and tap **Start Bot**.
-4. Run the guided setup in the dashboard — pick a layout, generate the channels and posts you want, switch on the plugins you want.
+4. Run the guided setup in the dashboard, pick a layout, generate the channels and posts you want, switch on the plugins you want.
 
 That is the whole install. No server, no terminal commands, no config files to edit by hand.
 
@@ -84,22 +84,22 @@ That is the whole install. No server, no terminal commands, no config files to e
 | Runtime | Termux (installed from the app's setup) | Termux, exempt from battery optimization |
 | Discord | Your own bot application + token | Privileged intents on: Server Members, Message Content, Presence |
 
-One bot instance per token. The app never contains your token — it lives only in the app's private storage and in Termux's `~/nova-bot/.env`.
+One bot instance per token. The app never contains your token, it lives only in the app's private storage and in Termux's `~/nova-bot/.env`.
 
 
 ## Built with
 
-- **Node.js 24** — the bot engine, raw Discord gateway (WebSocket) + REST, no AI tokens
-- **Java 17 / Android** — the app, dashboard bridge, and home-screen widgets
-- **Termux** — the Linux runtime on the phone (Node, Python, curl)
-- **Python + Pillow** — member cards, welcome cards, and profile cards, rendered per person at the moment they are needed
-- **FFmpeg + yt-dlp** — music playback in voice channels
-- **eSpeak NG** — text-to-speech into voice channels
-- **Discord.js-style REST** — every action is an individual Discord REST request; listening is a continuous gateway stream
+- **Node.js 24**, the bot engine, raw Discord gateway (WebSocket) + REST, no AI tokens
+- **Java 17 / Android**, the app, dashboard bridge, and home-screen widgets
+- **Termux**, the Linux runtime on the phone (Node, Python, curl)
+- **Python + Pillow**, member cards, welcome cards, and profile cards, rendered per person at the moment they are needed
+- **FFmpeg + yt-dlp**, music playback in voice channels
+- **eSpeak NG**, text-to-speech into voice channels
+- **Discord.js-style REST**, every action is an individual Discord REST request; listening is a continuous gateway stream
 
 ## The honest limits
 
-Nova Bot is transparent about what it cannot do yet — a failed step shows as failed, never under a green checkmark.
+Nova Bot is transparent about what it cannot do yet, a failed step shows as failed, never under a green checkmark.
 
 - The bot runs on your phone, so it is only online while the phone and Termux are running. A dead phone means a dead bot until you open Termux and restart it.
 - Music and voice need the phone's Termux runtime; the app cannot play audio from a cloud browser to your phone.
@@ -109,27 +109,27 @@ Nova Bot is transparent about what it cannot do yet — a failed step shows as f
 
 ## Screenshots
 
-_Screenshots live in the app's Help guide and on the project website — the dashboard, the guided setup, the Servers page, the voice pages, and the widgets._
+_Screenshots live in the app's Help guide and on the project website, the dashboard, the guided setup, the Servers page, the voice pages, and the widgets._
 
 ## Documentation
 
-- **What It Does & How It Works** — the full 16-page capability guide (PDF), also inside the app on the Bot page and the Help guide page.
-- **Nova Bot Breakdown Chart** — the feature breakdown (PDF).
+- **What It Does & How It Works**, the full 16-page capability guide (PDF), also inside the app on the Bot page and the Help guide page.
+- **Nova Bot Breakdown Chart**, the feature breakdown (PDF).
 - In-app: Help guide, guided setup, and the dashboard Documentation page.
 
 ## Contributing
 
-Nova Bot is built by Jordan Albiar — payal.me/jordanalbiar
+Nova Bot is built by Jordan Albiar, find him at payal.me/jordanalbiar
 
 ---
 
-**NOVA — NODE • ORIENTED • VIRTUAL • ASSISTANT**
+**NOVA stands for NODE • ORIENTED • VIRTUAL • ASSISTANT**
 
 
 ## Current version
 
-![Phelsuma — the v1.0 day gecko](assets/nova-gecko-phelsuma.png)
+![Phelsuma, the v1.0 day gecko](assets/nova-gecko-phelsuma.png)
 
-**Nova Bot is currently on v1.0 Phelsuma** — the first public release, themed on the day gecko.
+**Nova Bot is currently on v1.0 Phelsuma**, the first public release, themed on the day gecko.
 
 [Download v1.0 Phelsuma (APK, 61 MB)](https://github.com/jordanalbiar/nova-bot/releases/download/v1.0/nova-bot-v1.0-phelsuma.apk) · [v1.0 release notes](https://github.com/jordanalbiar/nova-bot/releases/tag/v1.0)
