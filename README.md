@@ -66,6 +66,34 @@ The bot starts as a **blank canvas**. A fresh server gets no channels, no posts,
 
 First public release — nicknamed Phelsuma, after the day gecko. Install it over any earlier build. See the [v1.0 release notes](https://github.com/jordanalbiar/nova-bot/releases/tag/v1.0) for what's in it.
 
+## Screenshots
+
+Fresh from a Razr running v1.0 Phelsuma, 21 November 2026.
+
+![Dashboard home](assets/screenshots/dashboard-home.jpg)
+*Dashboard home — NOVA header, ONLINE, flank buttons, runtime.*
+
+![Bot page — start-check guide](assets/screenshots/bot-start-check.jpg)
+*Bot page — start-check guide 10 of 10, health, watchdog.*
+
+![Config — Welcome module](assets/screenshots/config-welcome.jpg)
+*Config — Welcome module settings and live card preview.*
+
+![System — runtime and lifecycle](assets/screenshots/system-runtime.jpg)
+*System — runtime, bot lifecycle, guided setup.*
+
+![Plugins](assets/screenshots/plugins.jpg)
+*Plugins — every plugin switch for this server.*
+
+![Post composer and poll](assets/screenshots/post-composer.jpg)
+*Post composer — embed builder and Nova poll.*
+
+![DMs](assets/screenshots/dms.jpg)
+*DMs — send a message as the bot, all DMs.*
+
+![Diagnostics](assets/screenshots/diagnostics.jpg)
+*Diagnostics — flagged problems, bot log, activity.*
+
 ## Quick start
 
 1. Install the Nova Bot APK on an Android phone (Android 10+).
@@ -125,3 +153,12 @@ Nova Bot is built by Jordan Albiar — payal.me/jordanalbiar
 ---
 
 **NOVA — NODE • ORIENTED • VIRTUAL • ASSISTANT**
+
+
+## Current version
+
+![Phelsuma — the v1.0 day gecko](assets/nova-gecko-phelsuma.png)
+
+**Nova Bot is currently on v1.0 Phelsuma** — the first public release, themed on the day gecko.
+
+[Download v1.0 Phelsuma (APK, 61 MB)](https://github.com/jordanalbiar/nova-bot/releases/download/v1.0/nova-bot-v1.0-phelsuma.apk) · [v1.0 release notes](https://github.com/jordanalbiar/nova-bot/releases/tag/v1.0)
