@@ -27,7 +27,6 @@ No server needed. No hosting bill. No code to write.
 
 Nova Bot turns an Android phone into a full Discord bot host with a phone dashboard that controls everything, a soundboards to music in voice channels, and 30 plugins that stay off until you switch them on.
 
-![Nova divider](assets/nova-divider.png)
 
 ## What it does
 
@@ -114,7 +113,6 @@ That is the whole install. No server, no terminal commands, no config files to e
 
 One bot instance per token. The app never contains your token — it lives only in the app's private storage and in Termux's `~/nova-bot/.env`.
 
-![Nova divider — voice](assets/nova-divider-voice.png)
 
 ## Built with
 
