@@ -60,6 +60,12 @@ The bot starts as a **blank canvas**. A fresh server gets no channels, no posts,
 - Every auto-posting stream (welcome posts, member cards, join DMs, news, GitHub updates, activity-log lines) starts **off**. A stream that was never switched on never posts, even after a restart.
 - Status **cannot lie**. The app judges ONLINE only when the bot's heartbeat is fresh against the phone's own clock (under about 90 seconds old). An old heartbeat reads as DISCONNECTED with "status stale since", never as a hopeful ONLINE.
 
+## Download
+
+**[Download Nova Bot v1.0 Phelsuma (APK, 61 MB)](https://github.com/jordanalbiar/nova-bot/releases/download/v1.0/nova-bot-v1.0-phelsuma.apk)**
+
+First public release — nicknamed Phelsuma, after the day gecko. Install it over any earlier build. See the [v1.0 release notes](https://github.com/jordanalbiar/nova-bot/releases/tag/v1.0) for what's in it.
+
 ## Quick start
 
 1. Install the Nova Bot APK on an Android phone (Android 10+).
