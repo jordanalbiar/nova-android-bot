@@ -930,15 +930,14 @@
       .ico-json{ background:rgba(233,243,251,.1); color:var(--ink); border:1px solid var(--line); }
       .ico-github{ background:rgba(233,243,251,.1); color:var(--ink); border:1px solid var(--line); }
       .ico-ws{ background:rgba(20,150,186,.16); color:#8cecff; border:1px solid rgba(20,150,186,.6); }
-      /* Albiar chip, the extra chip centred below Nova in the footer
-         cloud, in Albiar blue with a bold A. On narrow screens it
-         drops to the very bottom centre so it stays clear of the
-         chips along the bottom row, and the FFmpeg and yt-dlp
-         voice chips drop to that same bottom line, one at each
-         corner, so the bottom row never crowds on a phone */
-      .ico-albiar{ background:rgba(20,150,186,.22); color:#aee6fa; border:1px solid rgba(20,150,186,.65); font-weight:700; }
+      /* Credits chip, the extra chip centred below Nova in the footer
+         cloud. On narrow screens it drops to the very bottom centre
+         so it stays clear of the chips along the bottom row, and the
+         FFmpeg and yt-dlp voice chips drop to that same bottom line,
+         one at each corner, so the bottom row never crowds on a phone */
+      .ico-credits{ background:rgba(20,150,186,.22); color:#aee6fa; border:1px solid rgba(20,150,186,.65); font-weight:700; }
       @media (max-width: 720px){
-        .chip-albiar{ top:95% !important; }
+        .chip-credits{ top:95% !important; }
         .chip-ffmpeg{ left:4% !important; top:95% !important; }
         .chip-ytdlp{ right:4% !important; top:95% !important; }
       }
@@ -1025,23 +1024,56 @@
       .tech-chip:hover{ border-color:var(--accent); }
       .tech-chip:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
       .tech-chip[aria-expanded="true"]{ border-color:var(--accent); box-shadow:0 8px 22px rgba(0,0,0,.35), 0 0 0 1px var(--accent); }
+      /* Footer chip message window, a proper window panel that opens
+         OVER the Nova avatar figure in the middle of the footer cloud
+         (centred on her, at her own centre point), not a small tooltip
+         beside the chip that was tapped. Every chip uses this one
+         window: toggling a chip opens it with that chip's message,
+         opening another chip swaps the message, and toggling the same
+         chip again, the window's close button, tapping elsewhere, or
+         Escape closes it. The window is centred in CSS alone, so it
+         stays over Nova at every width with no script positioning */
       .tech-tooltip{
-        position:absolute; z-index:12; width:250px; max-width:calc(100vw - 40px);
-        background:var(--panel-2); border:1px solid var(--accent); border-radius:10px;
-        padding:12px 14px 13px; text-align:left; box-shadow:0 18px 44px rgba(0,0,0,.55);
+        position:absolute; z-index:12;
+        left:50%; top:47%; transform:translate(-50%,-50%);
+        width:340px; max-width:calc(100% - 28px);
+        background:var(--panel-2); border:1.5px solid var(--neon); border-radius:12px;
+        padding:0; text-align:left; overflow:hidden;
+        box-shadow:0 0 22px rgba(62,214,247,.25), 0 24px 54px rgba(0,0,0,.62);
       }
       .tech-tooltip[hidden]{ display:none; }
+      .tech-win-bar{
+        display:flex; align-items:center; gap:9px;
+        padding:10px 12px 10px 14px;
+        background:linear-gradient(90deg, rgba(62,214,247,.16), var(--panel) 62%);
+        border-bottom:1px solid var(--neon-dim);
+      }
+      .tech-win-dot{
+        flex:none; width:10px; height:10px; border-radius:50%;
+        background:var(--neon); box-shadow:0 0 7px rgba(62,214,247,.8);
+      }
       .tech-tooltip b{
-        display:block; font-family:"Rajdhani", sans-serif; color:var(--ink);
-        letter-spacing:.07em; font-size:1.02rem; margin-bottom:3px;
+        flex:1 1 auto; min-width:0;
+        font-family:"Rajdhani", sans-serif; color:var(--ink);
+        letter-spacing:.08em; font-size:1.08rem; line-height:1.2;
       }
-      .tech-tooltip p{ margin:0; font-size:.88rem; line-height:1.45; color:var(--body); }
-      .tech-tooltip::after{
-        content:""; position:absolute; left:var(--arrow-x, 50%); width:12px; height:12px;
-        background:var(--panel-2); transform:translateX(-50%) rotate(45deg);
+      .tech-win-close{
+        flex:none; width:34px; height:34px; min-height:34px; padding:0;
+        display:inline-flex; align-items:center; justify-content:center;
+        border-radius:7px; border:1px solid var(--neon-dim); background:rgba(8,20,38,.72);
+        color:var(--ink); font-size:1.2rem; line-height:1; cursor:pointer;
       }
-      .tech-tooltip.below::after{ top:-7px; border-left:1px solid var(--accent); border-top:1px solid var(--accent); }
-      .tech-tooltip.above::after{ bottom:-7px; border-right:1px solid var(--accent); border-bottom:1px solid var(--accent); }
+      .tech-win-close:hover{ border-color:var(--neon); color:var(--neon); }
+      .tech-win-close:focus-visible{ outline:2px solid var(--neon); outline-offset:2px; }
+      .tech-win-body{ padding:14px 16px 16px; background:rgba(8,20,38,.94); }
+      .tech-tooltip p{ margin:0; font-size:.95rem; line-height:1.55; color:var(--body); }
+      .tech-tip-link-wrap{ margin-top:10px !important; }
+      .tech-tip-link-wrap[hidden]{ display:none; }
+      .tech-tip-link-wrap a{
+        color:var(--accent); font-family:"IBM Plex Mono", monospace; font-size:.88rem;
+        word-break:break-all;
+      }
+      .tech-tip-link-wrap a:hover{ color:#aeeeff; }
 
       .toast{
         position:fixed; left:50%; bottom:26px; transform:translate(-50%, 20px);
@@ -2378,7 +2410,7 @@
 
     <footer>
       <div class="wrap">
-        <div class="foot-cloud" aria-label="Nova, powered by Node.js, JavaScript, Python, Discord.js, Termux, Android, Pillow, FFmpeg, yt-dlp, eSpeak NG, JSON, GitHub and the Discord gateway">
+        <div class="foot-cloud" aria-label="Nova, powered by Node.js, JavaScript, Python, Discord.js, Termux, Android, Pillow, FFmpeg, yt-dlp, eSpeak NG, JSON, GitHub and the Discord gateway, plus Credits">
           <svg class="foot-wires" viewBox="0 0 980 500" preserveAspectRatio="none" aria-hidden="true" focusable="false">
             <polyline points="95,45 280,120 490,235" />
             <polyline points="885,65 700,130 490,235" />
@@ -2440,10 +2472,17 @@
           <button type="button" class="tech-chip" aria-expanded="false" aria-controls="techTooltip" data-name="Pillow" data-desc="Python’s image library. It draws the welcome cards, member ID cards and client cards that Nova posts." style="left:18%; top:88%;"><span class="tech-ico ico-pillow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></span>Pillow</button>
           <button type="button" class="tech-chip chip-json" aria-expanded="false" aria-controls="techTooltip" data-name="JSON" data-desc="The plain-text format Nova Bot stores her settings and data in, simple files that are easy to back up and restore." style="right:18%; top:87%;"><span class="tech-ico ico-json">{ }</span>JSON</button>
           <button type="button" class="tech-chip chip-ytdlp" aria-expanded="false" aria-controls="techTooltip" data-name="yt-dlp" data-desc="The downloader behind YouTube music. When you use /play, yt-dlp fetches the track’s audio so Nova can stream it into your voice channel." style="right:1%; top:88%;"><span class="tech-ico ico-ytdlp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10M7.5 9 12 13.5 16.5 9M4 19h16"/></svg></span>yt-dlp</button>
-          <button type="button" class="tech-chip chip-albiar" aria-expanded="false" aria-controls="techTooltip" data-name="Albiar" data-desc="Albiar is the father-and-son design and development team that created Nova Bot. They designed her, built her, and keep developing her for the Albiar creative community." style="left:50%; top:88%; transform:translateX(-50%);"><span class="tech-ico ico-albiar"><svg viewBox="0 0 64 56" aria-hidden="true"><polygon points="24,4 40,4 58,30 58,44 32,21 6,44 6,30" fill="#1496ba"/><polygon points="32,33 41,49 23,49" fill="#e9f3fb"/></svg></span>Albiar</button>
-          <div class="tech-tooltip below" id="techTooltip" role="tooltip" hidden>
-            <b id="techTipTitle"></b>
-            <p id="techTipBody"></p>
+          <button type="button" class="tech-chip chip-credits" aria-expanded="false" aria-controls="techTooltip" data-name="Credits" data-desc="Nova Bot was designed and built by Jordan Albiar, a designer and developer who created Nova to run a whole Discord server from a phone. He designs her, builds her, and keeps developing her. See more of his work on his GitHub page." data-link="https://jordanalbiar.github.io/" data-link-text="jordanalbiar.github.io" style="left:50%; top:88%; transform:translateX(-50%);"><span class="tech-ico ico-credits"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5.2 19.6c1.1-3 3.7-4.6 6.8-4.6s5.7 1.6 6.8 4.6"/></svg></span>Credits</button>
+          <div class="tech-tooltip" id="techTooltip" role="dialog" aria-labelledby="techTipTitle" hidden>
+            <div class="tech-win-bar">
+              <span class="tech-win-dot" aria-hidden="true"></span>
+              <b id="techTipTitle"></b>
+              <button type="button" class="tech-win-close" id="techTipClose" aria-label="Close this message">&times;</button>
+            </div>
+            <div class="tech-win-body">
+              <p id="techTipBody"></p>
+              <p class="tech-tip-link-wrap" id="techTipLinkWrap" hidden><a id="techTipLink" href="https://jordanalbiar.github.io/" target="_blank" rel="noopener">jordanalbiar.github.io</a></p>
+            </div>
           </div>
         </div>
         <p class="foot-hint" id="footHint">Tap any of the chips around Nova to see what it does.</p>
@@ -2834,13 +2873,22 @@
           window.addEventListener('resize', closePluginTip);
         }
 
-        /* Footer tech chips, tapping one opens a little tooltip beside it
-           explaining what that part does; tapping it again, tapping anywhere
-           else, or pressing Escape closes it */
+        /* Footer tech chips, tapping one opens its message in the one
+           window panel centred over the Nova avatar figure in the
+           footer (see .tech-tooltip in the stylesheet, centred on her
+           in CSS, no script positioning). Toggling the same chip again
+           closes the window, opening another chip swaps the window's
+           message to that chip's, and the window's close button,
+           tapping anywhere else, or pressing Escape closes it too.
+           A chip may carry a data-link (the Credits chip links to
+           Jordan Albiar's GitHub page), shown under its message */
         var techChips = Array.prototype.slice.call(document.querySelectorAll('.tech-chip'));
         var techTip = document.getElementById('techTooltip');
         var techTipTitle = document.getElementById('techTipTitle');
         var techTipBody = document.getElementById('techTipBody');
+        var techTipLinkWrap = document.getElementById('techTipLinkWrap');
+        var techTipLink = document.getElementById('techTipLink');
+        var techTipClose = document.getElementById('techTipClose');
         var openChip = null;
         function closeTechTip() {
           techTip.hidden = true;
@@ -2853,32 +2901,24 @@
           chip.setAttribute('aria-expanded', 'true');
           techTipTitle.textContent = chip.getAttribute('data-name');
           techTipBody.textContent = chip.getAttribute('data-desc');
+          var link = chip.getAttribute('data-link');
+          if (link && techTipLink && techTipLinkWrap) {
+            techTipLink.setAttribute('href', link);
+            techTipLink.textContent = chip.getAttribute('data-link-text') || link;
+            techTipLinkWrap.hidden = false;
+          } else if (techTipLinkWrap) {
+            techTipLinkWrap.hidden = true;
+          }
           techTip.hidden = false;
-          var cloud = techTip.offsetParent;
-          if (!cloud) return;
-          var cloudW = cloud.clientWidth, cloudH = cloud.clientHeight;
-          /* Measured from the rendered boxes, not offsetLeft, so a
-             chip centred with a transform (the Albiar chip below
-             Nova) still gets its tooltip centred on where it sits */
-          var cloudRect = cloud.getBoundingClientRect();
-          var chipRect = chip.getBoundingClientRect();
-          var chipCX = chipRect.left - cloudRect.left + chipRect.width / 2;
-          var chipTop = chipRect.top - cloudRect.top;
-          var tipW = techTip.offsetWidth, tipH = techTip.offsetHeight;
-          var left = Math.max(4, Math.min(chipCX - tipW / 2, cloudW - tipW - 4));
-          var below = chipTop < cloudH * 0.55;
-          techTip.classList.toggle('below', below);
-          techTip.classList.toggle('above', !below);
-          techTip.style.left = left + 'px';
-          techTip.style.top = (below ? chipTop + chipRect.height + 10
-                                     : chipTop - tipH - 10) + 'px';
-          techTip.style.setProperty('--arrow-x', Math.max(18, Math.min(chipCX - left, tipW - 18)) + 'px');
         }
         techChips.forEach(function (chip) {
           chip.addEventListener('click', function () {
             if (openChip === chip) { closeTechTip(); } else { openTechTip(chip); }
           });
         });
+        if (techTipClose) {
+          techTipClose.addEventListener('click', function () { closeTechTip(); });
+        }
         document.addEventListener('click', function (e) {
           if (!openChip) return;
           var t = e.target;
@@ -2888,7 +2928,6 @@
         document.addEventListener('keydown', function (e) {
           if (e.key === 'Escape') closeTechTip();
         });
-        window.addEventListener('resize', closeTechTip);
 
         /* Footer hint, "Tap any of the chips around Nova…" stays hidden
            by default. Hovering (or keyboard-focusing) the footer avatar
