@@ -19,7 +19,7 @@ No server needed. No hosting bill. No code to write.
 ![FFmpeg](https://img.shields.io/badge/FFmpeg-Audio-007808?style=for-the-badge&logo=ffmpeg&logoColor=white)
 ![yt-dlp](https://img.shields.io/badge/yt--dlp-Music-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
 ![eSpeak NG](https://img.shields.io/badge/eSpeak%20NG-TTS-4B8BBE?style=for-the-badge&logo=readthedocs&logoColor=white)
-![License](https://img.shields.io/badge/License-Proprietary-lightgrey?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ---
 
