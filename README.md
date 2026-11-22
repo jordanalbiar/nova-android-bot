@@ -61,9 +61,9 @@ The bot starts as a **blank canvas**. A fresh server gets no channels, no posts,
 
 ## Download
 
-**[Download Nova Bot v1.0 Phelsuma (APK, 61 MB)](https://github.com/jordanalbiar/nova-bot/releases/download/v1.0/nova-bot-v1.0-phelsuma.apk)**
+**[Download Nova Bot v1.0 Phelsuma (APK, 61 MB)](https://github.com/jordanalbiar/nova-android-bot/releases/download/v1.0/nova-bot-v1.0-phelsuma.apk)**
 
-First public release, nicknamed Phelsuma, after the day gecko. Install it over any earlier build. See the [v1.0 release notes](https://github.com/jordanalbiar/nova-bot/releases/tag/v1.0) for what's in it.
+First public release, nicknamed Phelsuma, after the day gecko. Install it over any earlier build. See the [v1.0 release notes](https://github.com/jordanalbiar/nova-android-bot/releases/tag/v1.0) for what's in it.
 
 
 ## Quick start
@@ -132,4 +132,4 @@ Nova Bot is built by Jordan Albiar, find him at payal.me/jordanalbiar
 
 **Nova Bot is currently on v1.0 Phelsuma**, the first public release, themed on the day gecko.
 
-[Download v1.0 Phelsuma (APK, 61 MB)](https://github.com/jordanalbiar/nova-bot/releases/download/v1.0/nova-bot-v1.0-phelsuma.apk) · [v1.0 release notes](https://github.com/jordanalbiar/nova-bot/releases/tag/v1.0)
+[Download v1.0 Phelsuma (APK, 61 MB)](https://github.com/jordanalbiar/nova-android-bot/releases/download/v1.0/nova-bot-v1.0-phelsuma.apk) · [v1.0 release notes](https://github.com/jordanalbiar/nova-android-bot/releases/tag/v1.0)
