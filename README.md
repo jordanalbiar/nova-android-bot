@@ -65,6 +65,10 @@ The bot starts as a **blank canvas**. A fresh server gets no channels, no posts,
 
 First public release, nicknamed Phelsuma, after the day gecko. Install it over any earlier build. See the [v1.0 release notes](https://github.com/jordanalbiar/nova-android-bot/releases/tag/v1.0) for what's in it.
 
+Inside the app, v1.1:
+
+![Inside the app, v1.1](assets/download-preview-collage.jpg)
+
 
 ## Quick start
 
