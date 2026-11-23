@@ -175,8 +175,13 @@
       .hero-actions .win-btn{ margin-bottom:0; background:rgba(8,20,38,.72); }
       /* Nova figure, centered, no frame, no circle: its edges fade out well
          inside the frame, so the artwork's own dark ground melts straight
-         into the header's matching ground with no visible panel or seam */
-      .figure-link{ position:relative; z-index:1; display:block; line-height:0; cursor:pointer; -webkit-tap-highlight-color:transparent; }
+         into the header's matching ground with no visible panel or seam.
+         No z-index on this wrapper: a z-index here would make this
+         positioned element a stacking context, which isolates the
+         screen blend on .hero-logo-char below, so the blend would run
+         against transparent instead of the page wallpaper and the
+         black ground would survive as a hard-edged box */
+      .figure-link{ position:relative; display:block; line-height:0; cursor:pointer; -webkit-tap-highlight-color:transparent; }
       .hero-figure{
         height:clamp(200px, 25vw, 265px); width:auto; display:block;
         /* No panel, box or backdrop of her own behind her: screen blending
